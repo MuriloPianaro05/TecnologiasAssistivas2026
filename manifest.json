@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Modo Acessível",
+  "version": "2.0",
+  "description": "Alto contraste, fonte ampliada, espaçamento de leitura e navegação simplificada para páginas web.",
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-contrast": {
+      "suggested_key": { "default": "Ctrl+Shift+1" },
+      "description": "Alternar alto contraste"
+    },
+    "toggle-font": {
+      "suggested_key": { "default": "Ctrl+Shift+2" },
+      "description": "Alternar fonte ampliada"
+    },
+    "toggle-nav": {
+      "suggested_key": { "default": "Ctrl+Shift+3" },
+      "description": "Alternar navegação simplificada"
+    },
+    "toggle-reading": {
+      "suggested_key": { "default": "Ctrl+Shift+4" },
+      "description": "Alternar espaçamento de leitura"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

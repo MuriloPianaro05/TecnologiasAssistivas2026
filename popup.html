@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <title>Modo Acessível</title>
+</head>
+<body>
+  <h1>Modo Acessível</h1>
+
+  <label class="opcao">
+    <input type="checkbox" id="contrast">
+    <span>Alto contraste</span>
+  </label>
+
+  <label class="opcao">
+    <input type="checkbox" id="nav">
+    <span>Navegação simplificada</span>
+  </label>
+
+  <label class="opcao">
+    <input type="checkbox" id="reading">
+    <span>Espaçamento de leitura</span>
+  </label>
+
+  <div class="fonte">
+    <span>Tamanho da fonte</span>
+    <span id="valorFonte">100%</span>
+    <input type="range" id="fontScale" min="100" max="200" step="10">
+  </div>
+
+  <button id="reset">Redefinir tudo</button>
+
+  <div class="atalhos">
+    <p>Atalhos:</p>
+    <p>Ctrl+Shift+1 — Contraste</p>
+    <p>Ctrl+Shift+2 — Fonte</p>
+    <p>Ctrl+Shift+3 — Navegação</p>
+    <p>Ctrl+Shift+4 — Leitura</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
